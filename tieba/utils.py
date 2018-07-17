@@ -2,6 +2,9 @@
 import re
 import urllib.request
 
+'''
+爬取百度贴吧帖子图片
+'''
 
 # 下载图片
 def get_image(html_code):
