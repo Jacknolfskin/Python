@@ -1,0 +1,8 @@
+print(1 or 2)
+print(1 and 2)
+print(1 < (2 == 2))
+print(1 < 3 == 3)
+print(True == 3)
+print(False == 3)
+print(False == 0)
+print(True == 1)

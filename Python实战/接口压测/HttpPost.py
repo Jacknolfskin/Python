@@ -6,6 +6,7 @@ import requests
 import random
 import uuid
 import logging
+
 """
 
 Post请求压测
@@ -20,7 +21,7 @@ logging.basicConfig(level=logging.DEBUG,
 add = "192.168.5.10"
 port = 80
 thread_count = 3  # 单次并发数量
-request_interval = 2 # 请求间隔(秒)
+request_interval = 2  # 请求间隔(秒)
 test_count = 5  # 指定测试次数
 t_objs = []  # 存线程实例
 
