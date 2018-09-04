@@ -9,14 +9,15 @@ import re
 from multiprocessing import Pool
 from hashlib import md5
 from json.decoder import JSONDecodeError
-from config import *
+#from config import *
+import config
 
 """
 分析Ajax抓取今日头条街拍美图
 """
 
-client = pymongo.MongoClient(MONGO_URL, connect=False)
-db = client[MONGO_DB]
+client = pymongo.MongoClient(config.MONGO_URL, connect=False)
+db = client[config.MONGO_DB]
 
 
 def get_page_index(offset, keyword):
@@ -102,14 +103,14 @@ def parse_page_detail(html, url):
 
 
 def save_to_mongo(result):
-    if db[MONGO_TABLE].insert(result):
+    if db[config.MONGO_TABLE].insert(result):
         print('Successfully Saved to Mongo', result)
         return True
     return False
 
 
 def main(offset):
-    text = get_page_index(offset, KEYWORD)
+    text = get_page_index(offset, config.KEYWORD)
     urls = parse_page_index(text)
     for url in urls:
         html = get_page_detail(url)
@@ -118,7 +119,7 @@ def main(offset):
 
 
 if __name__ == '__main__':
-    html = get_page_index(1,KEYWORD)
+    html = get_page_index(1,config.KEYWORD)
     save_to_mongo(json.dumps(html))
     # pool = Pool()
     # groups = ([x * 20 for x in range(GROUP_START, GROUP_END + 1)])
