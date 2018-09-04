@@ -1,6 +1,10 @@
 # coding:utf-8
 import utils
 
+'''
+爬取百度贴吧帖子图片
+'''
+
 url = 'http://tieba.baidu.com/p/1753935195'
 
 html = utils.get_html(url)

@@ -2,9 +2,6 @@
 用户身份验证
 """
 
-# import getpass
-# from getpass import getpass
-# from getpass import *
 import getpass
 
 username = input('请输入用户名: ')

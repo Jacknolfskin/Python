@@ -1,7 +1,9 @@
 import io
 import re
 
-
+"""
+统计文本中单词，并按出现频率排名
+"""
 class Count:
     def __init__(self, path):
         self.mapping = dict();

@@ -1,3 +1,7 @@
+"""
+成绩筛选
+"""
+
 score = float(input('请输入成绩:'))
 if score >= 80:
     grade = 'A'
