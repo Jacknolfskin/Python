@@ -1,5 +1,6 @@
 import xlwt
 
+
 # 设置表格样式
 def set_style(name, height, bold=False):
     style = xlwt.XFStyle()
