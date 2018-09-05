@@ -1,8 +1,10 @@
-import requests
-import random
-from threading import Thread
 import datetime
+import random
 import time
+from threading import Thread
+import requests
+from name import get_name
+
 """
 
 接口压测
@@ -86,3 +88,5 @@ if __name__ == '__main__':
     total_request()
     new_time = datetime.datetime.now()
     print("finish，共耗时：", (new_time - old_time).seconds, "秒")
+    for i in range(10):
+        main()
