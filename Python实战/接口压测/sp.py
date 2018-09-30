@@ -3,8 +3,6 @@ import random
 import time
 from threading import Thread
 import requests
-from name import get_name
-
 """
 
 接口压测

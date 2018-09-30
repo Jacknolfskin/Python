@@ -3,6 +3,12 @@
 import urllib.request
 from bs4 import BeautifulSoup
 
+"""
+
+随机取名
+
+"""
+
 name_list = []
 
 
@@ -18,13 +24,12 @@ def get_name(url):
         for name in soup.find_all('a', class_='btn btn-link')[:10]:  # 找到不同姓氏的名字，此处只获取每个姓氏的前10个
             name_list.append(name.text)
             # print(name.text)
-
-    print(len(name_list))
+    #print(len(name_list))
     return name_list
 
 
 if __name__ == '__main__':
     url = "http://www.resgain.net/xsdq.html"
-    # for x in get_name(url):
-    #     print(x)
-    print(get_name(url))
+    for x in get_name(url):
+        print(x)
+    # print(get_name(url))
