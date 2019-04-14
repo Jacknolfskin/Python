@@ -3,6 +3,7 @@ import xlrd
 # 读取Excel
 file = 'test.xls'
 
+
 def read_excel():
     wb = xlrd.open_workbook(filename=file)  # 打开文件
     print(wb.sheet_names())  # 获取所有表格名字
